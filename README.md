@@ -16,11 +16,11 @@ Register : https://t.me/KuroroRanchBot/ranch?startapp=ref-EC586521
      ```
    - Ini akan menginstal dua modul yang diperlukan: `requests` untuk melakukan permintaan HTTP dan `colorama` untuk memberi warna teks di konsol.
 
-3. **Buka Bot Blum di PC (Telegram Web / Desktop)**
+3. **Buka Bot Kuroro Ranch di PC (Telegram Web / Desktop)**
    - Buka Telegram Web atau Telegram Desktop di PC kamu.
 
 4. **Ambil query_id**
-   - Buka Bot Blum dan lakukan inspeksi elemen di halaman tersebut.
+   - Buka Bot Kuroro Ranch dan lakukan inspeksi elemen di halaman tersebut.
    - Pergi ke tab Application (biasanya di browser, ada di bagian atas inspector).
    - Pilih `session storage` dan kemudian `ranch.kuroro.com`.
    - Di dalamnya, cari `__telegram_initparam` dan temukan `tgwebappdata`.
