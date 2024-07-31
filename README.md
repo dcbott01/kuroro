@@ -12,7 +12,7 @@ Register : https://t.me/KuroroRanchBot/ranch?startapp=ref-EC586521
 2. **Install Module**
    - Buka command prompt atau terminal, lalu jalankan perintah:
      ```
-     pip install requests colorama
+     pip install -r requirements.txt
      ```
    - Ini akan menginstal dua modul yang diperlukan: `requests` untuk melakukan permintaan HTTP dan `colorama` untuk memberi warna teks di konsol.
 
@@ -28,6 +28,14 @@ Register : https://t.me/KuroroRanchBot/ranch?startapp=ref-EC586521
 
 5. **Paste di query.txt**
    - Buat atau buka file `query.txt` dan paste nilai `query_id` atau `user=xxx` yang telah kamu ambil sebelumnya.
+
+
+
+For Session Script :
+
+1. Jalankan session.py lalu pilih 1 dan login untuk membuat session
+2. Setelah session dibuat, jalankan lagi session.py lalu pilih 2 untuk running script
+
   
 ## Features
 - Auto Upgrade
