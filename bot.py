@@ -143,31 +143,32 @@ def main():
         print(Fore.RED + "No bearer tokens found. Exiting...")
         return
 
-    for i, bearer_token in enumerate(bearer_tokens, start=1):
-        print(Fore.BLUE + Style.BRIGHT + f"\n========== PROCESSING ACCOUNT {i} ==========")
-        checkin(bearer_token)
-        reffstate(bearer_token)
-        update_coin(bearer_token)
-        earnrate(bearer_token)
-        mining_payload = {"mineAmount": 100, "feedAmount": 0}
-        perform_action(mining_url, "Mining", mining_payload, bearer_token)
-        feeding_payload = {"mineAmount": 0, "feedAmount": 10}
-        perform_action(mining_url, "Feeding", feeding_payload, bearer_token)
-        ball_payload = {"hits": 10}
-        perform_action(ball_url, "Tap Ball", ball_payload, bearer_token)
-        print(Fore.CYAN + Style.BRIGHT + f"\n========== PROCESSING UPGRADE ==========")
-        if user_choice == 'yes':
-            upgrade_process(bearer_token)
-        else:
-            print(Fore.YELLOW + "Skipping upgrade process for this account.")
-        print(Fore.CYAN + Style.BRIGHT + f"\nFinished processing account {i}. Moving to the next account...\n")
-        time.sleep(5)
+    while True:
+        for i, bearer_token in enumerate(bearer_tokens, start=1):
+            print(Fore.BLUE + Style.BRIGHT + f"\n========== PROCESSING ACCOUNT {i} ==========")
+            checkin(bearer_token)
+            reffstate(bearer_token)
+            update_coin(bearer_token)
+            earnrate(bearer_token)
+            mining_payload = {"mineAmount": 100, "feedAmount": 0}
+            perform_action(mining_url, "Mining", mining_payload, bearer_token)
+            feeding_payload = {"mineAmount": 0, "feedAmount": 10}
+            perform_action(mining_url, "Feeding", feeding_payload, bearer_token)
+            ball_payload = {"hits": 10}
+            perform_action(ball_url, "Tap Ball", ball_payload, bearer_token)
+            print(Fore.CYAN + Style.BRIGHT + f"\n========== PROCESSING UPGRADE ==========")
+            if user_choice == 'yes':
+                upgrade_process(bearer_token)
+            else:
+                print(Fore.YELLOW + "Skipping upgrade process for this account.")
+            print(Fore.CYAN + Style.BRIGHT + f"\nFinished processing account {i}. Moving to the next account...\n")
+            time.sleep(5)
 
-    print(Fore.BLUE + Style.BRIGHT + f"\n========== SEMUA AKUN TELAH DI PROSES ==========")
-    for _ in range(900):
-        minutes, seconds = divmod(900 - _, 60)
-        print(f"{random.choice([Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.CYAN, Fore.WHITE])+Style.BRIGHT}==== [ Looping berikutnya {minutes} menit {seconds} detik ] ===={Style.RESET_ALL}", end="\r", flush=True)
-        time.sleep(1)
+        print(Fore.BLUE + Style.BRIGHT + f"\n========== SEMUA AKUN TELAH DI PROSES ==========")
+        for _ in range(30):
+            minutes, seconds = divmod(30 - _, 60)
+            print(f"{random.choice([Fore.RED, Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.CYAN, Fore.WHITE])+Style.BRIGHT}==== [ Looping berikutnya {minutes} menit {seconds} detik ] ===={Style.RESET_ALL}", end="\r", flush=True)
+            time.sleep(1)
 
 if __name__ == "__main__":
     try:
