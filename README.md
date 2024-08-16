@@ -1,6 +1,6 @@
   
 # Kuroro Ranch Bot
-
+    
 Register : https://t.me/KuroroRanchBot/ranch?startapp=ref-EC586521
 
 
